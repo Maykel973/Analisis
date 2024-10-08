@@ -45,9 +45,9 @@ p {
     border-radius: 10px;
     padding: 20px;
     margin: 15px 0;
-    display: flex;
-    align-items: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Para posicionar el contenido dentro de la tarjeta */
+    height: 190px; /* Altura fija para las tarjetas */
 }
 
 .description-card:hover {
@@ -55,47 +55,38 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.description-card .icon {
-    flex: 0 0 50px;
-    margin-right: 20px;
+/* Encabezado de la tarjeta (ícono y título) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
 }
 
-.description-card img {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1); /* Iconos blancos */
-}
-
-.description-card h4 {
+.card-header h4 {
     margin: 0;
     color: #ffd700; /* Color dorado para títulos */
     font-size: 1.1rem;
 }
 
+.card-header .icon {
+    margin-left: 10px;
+}
+
+.card-header img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Iconos blancos */
+}
+
+/* Descripción de la tarjeta */
 .description-card p {
-    margin: 5px 0 0;
+    margin-top: 60px; /* Espacio para el encabezado */
     font-size: 0.95rem;
     color: #d1d1e0; /* Texto claro */
-}
-
-/* Estilo para los gráficos y selectores */
-select.form-select {
-    background-color: #2a2a3b;
-    color: #d1d1e0;
-    border: 1px solid #383850;
-    border-radius: 5px;
-    padding: 8px;
-    margin-bottom: 15px;
-}
-
-select.form-select:focus {
-    outline: none;
-    border-color: #ffd700; /* Resaltado dorado */
-    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Sombra dorada */
-}
-
-canvas {
-    background-color: #383850; /* Fondo para los gráficos */
-    border-radius: 10px;
-    padding: 20px;
+    height: 150px; /* Altura fija para el texto */
+    overflow: hidden; /* Evitar que el texto exceda el área de la tarjeta */
 }
