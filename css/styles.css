@@ -84,9 +84,9 @@ p {
 
 /* Descripción de la tarjeta */
 .description-card p {
-    margin-top: 60px; /* Espacio para el encabezado */
+    margin-top: 40px; /* Espacio para el encabezado */
     font-size: 0.95rem;
     color: #d1d1e0; /* Texto claro */
-    height: 150px; /* Altura fija para el texto */
-    overflow: hidden; /* Evitar que el texto exceda el área de la tarjeta */
+    height: 130px; /* Altura fija para el texto */
+    overflow: auto; /* Evitar que el texto exceda el área de la tarjeta */
 }
