@@ -1,0 +1,101 @@
+/* Estilo general de la página */
+body {
+    background-color: #1e1e2f; /* Fondo oscuro */
+    color: #d1d1e0; /* Texto claro */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    color: #ffd700 !important; /* Color dorado para el logo */
+}
+
+.nav-link {
+    color: #d1d1e0 !important;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important; /* Color dorado al pasar el mouse */
+}
+
+h1, h3 {
+    color: #ffd700; /* Color dorado para títulos */
+    font-weight: 600;
+}
+
+.container {
+    padding: 20px;
+}
+
+p {
+    color: #d1d1e0; /* Texto claro */
+    line-height: 1.6;
+}
+
+/* Estilo para las tarjetas explicativas */
+.description-card {
+    background-color: #2a2a3b; /* Fondo más claro */
+    border: 1px solid #383850; /* Borde sutil */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.description-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.description-card .icon {
+    flex: 0 0 50px;
+    margin-right: 20px;
+}
+
+.description-card img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Iconos blancos */
+}
+
+.description-card h4 {
+    margin: 0;
+    color: #ffd700; /* Color dorado para títulos */
+    font-size: 1.1rem;
+}
+
+.description-card p {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+    color: #d1d1e0; /* Texto claro */
+}
+
+/* Estilo para los gráficos y selectores */
+select.form-select {
+    background-color: #2a2a3b;
+    color: #d1d1e0;
+    border: 1px solid #383850;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+select.form-select:focus {
+    outline: none;
+    border-color: #ffd700; /* Resaltado dorado */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Sombra dorada */
+}
+
+canvas {
+    background-color: #383850; /* Fondo para los gráficos */
+    border-radius: 10px;
+    padding: 20px;
+}

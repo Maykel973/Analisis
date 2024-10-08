@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposición Censo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Censos 2010 - 2022</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-introduccion">Introducción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-graficos">Gráficos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-conclusiones">Conclusiones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Sección de introducción -->
+        <section id="seccion-introduccion">
+            <h1 class="text-center">Análisis de Tecnología - Censos 2010 y 2022</h1>
+            <p class="text-center">
+                Este análisis evalúa la situación de acceso y uso de la tecnología en la provincia de Formosa, 
+            tomando como referencia los censos 2010 y 2022. Se analizaron los datos comparando Formosa con 
+            otras provincias del NEA (Chaco, Corrientes, Misiones) y se estudió la situación interna de la 
+            provincia a nivel departamental.
+            </p>
+        </section>
+
+        <!-- Sección de gráficos -->
+        <section id="seccion-graficos" class="mt-4">
+            <div class="row">
+                <!-- Gráfico Censo 2010 -->
+                <div class="col-md-6">
+                    <h3 class="text-center">Censo 2010</h3>
+                    <select id="filterCensus2010" class="form-select mb-3">
+                        <option value="pcNEA">Provincias del NEA - PC</option>
+                        <option value="pcDept">Departamentos de Formosa - PC</option>
+                        <option value="celNEA">Provincias del NEA - Celulares</option>
+                        <option value="celDept">Departamentos de Formosa - Celulares</option>
+                    </select>
+                    <canvas id="census2010Chart" width="400" height="250"></canvas>
+                </div>
+
+                <!-- Gráfico Censo 2022 -->
+                <div class="col-md-6">
+                    <h3 class="text-center">Censo 2022</h3>
+                    <select id="filterCensus2022" class="form-select mb-3">
+                        <option value="pcNEA">Provincias del NEA - PC</option>
+                        <option value="pcDept">Departamentos de Formosa - PC</option>
+                        <option value="celNEA">Provincias del NEA - Celulares</option>
+                        <option value="celDept">Departamentos de Formosa - Celulares</option>
+                    </select>
+                    <canvas id="census2022Chart" width="400" height="250"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarjetas explicativas organizadas en dos columnas -->
+        <section id="seccion-conclusiones" class="mt-5 text-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon1.png" alt="Icono 1">
+                        </div>
+                        <h4>Acceso a PC</h4>
+                        <p>Formosa presenta un menor acceso a computadoras comparado con otras provincias del NEA.</p>
+                    </div>
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon2.png" alt="Icono 2">
+                        </div>
+                        <h4>Uso de Celulares</h4>
+                        <p>El uso de celulares está más extendido en Formosa que el uso de computadoras.</p>
+                    </div>
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon3.png" alt="Icono 3">
+                        </div>
+                        <h4>Desigualdad</h4>
+                        <p>Las diferencias en el acceso a tecnología reflejan la disparidad socioeconómica.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon4.png" alt="Icono 4">
+                        </div>
+                        <h4>Incremento Tecnológico</h4>
+                        <p>En el Censo 2022, se observó un aumento en el acceso a la tecnología en la provincia.</p>
+                    </div>
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon5.png" alt="Icono 5">
+                        </div>
+                        <h4>Impacto Social</h4>
+                        <p>El acceso a la tecnología ha permitido mayor educación y conectividad en zonas rurales.</p>
+                    </div>
+                    <div class="description-card">
+                        <div class="icon">
+                            <img src="icon6.png" alt="Icono 6">
+                        </div>
+                        <h4>Comparación de Censos</h4>
+                        <p>La mejora en acceso a computadoras es notable, aunque sigue habiendo desigualdades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
